@@ -1,6 +1,7 @@
-## TYPO3 Extension "xxx"
+## TYPO3 Extension "webaim_wave"
 
 ### Purpose
+This extension implements Webaims Wave API into TYPO3 to check the accessibility of pages from the backend. 
 
 ### Tools
 
