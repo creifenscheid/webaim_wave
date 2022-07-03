@@ -1,6 +1,6 @@
 [![Latest Stable Version](http://poser.pugx.org/creifenscheid/webaim-wave/v)](https://packagist.org/packages/creifenscheid/webaim-wave) [![Total Downloads](http://poser.pugx.org/creifenscheid/webaim-wave/downloads)](https://packagist.org/packages/creifenscheid/webaim-wave) [![Latest Unstable Version](http://poser.pugx.org/creifenscheid/webaim-wave/v/unstable)](https://packagist.org/packages/creifenscheid/webaim-wave) [![License](http://poser.pugx.org/creifenscheid/webaim-wave/license)](https://packagist.org/packages/creifenscheid/webaim-wave)
 
-# TYPO3 Extension "Webaim Wave"
+# TYPO3 Extension "WebAIM WAVE"
 
 ## Features
 - ...
