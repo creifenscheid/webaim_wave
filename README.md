@@ -1,4 +1,4 @@
-[![Latest Stable Version](http://poser.pugx.org/creifenscheid/ctype-manager/v)](https://packagist.org/packages/creifenscheid/ctype-manager) [![Total Downloads](http://poser.pugx.org/creifenscheid/ctype-manager/downloads)](https://packagist.org/packages/creifenscheid/ctype-manager) [![Latest Unstable Version](http://poser.pugx.org/creifenscheid/ctype-manager/v/unstable)](https://packagist.org/packages/creifenscheid/ctype-manager) [![License](http://poser.pugx.org/creifenscheid/ctype-manager/license)](https://packagist.org/packages/creifenscheid/ctype-manager)
+[![Latest Stable Version](http://poser.pugx.org/creifenscheid/webaim-wave/v)](https://packagist.org/packages/creifenscheid/webaim-wave) [![Total Downloads](http://poser.pugx.org/creifenscheid/webaim-wave/downloads)](https://packagist.org/packages/creifenscheid/webaim-wave) [![Latest Unstable Version](http://poser.pugx.org/creifenscheid/webaim-wave/v/unstable)](https://packagist.org/packages/creifenscheid/webaim-wave) [![License](http://poser.pugx.org/creifenscheid/webaim-wave/license)](https://packagist.org/packages/creifenscheid/webaim-wave)
 
 # TYPO3 Extension "Webaim Wave"
 
