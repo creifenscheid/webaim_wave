@@ -16,3 +16,7 @@ I am doing this for fun, with heart and to improve my coding skills.
 Constructive critisism is very welcome.
 If you want to contribute, feel free to do so.
 Thank you!
+
+## Copyrights
+The WAVE logo is owned by [WebAIM](https://webaim.org/).
+I’d like to thank [WebAIM](https://webaim.org/) for allowing me to use the logo in this project.
