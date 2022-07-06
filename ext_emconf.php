@@ -27,7 +27,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'WebAIM WAVE',
-    'description' => 'Accessibility testing of pages via WebAIM WAVE API',
+    'description' => 'Accessibility testing of pages via WebAIM WAVE subscription API',
     'category' => 'be',
     'author' => 'C. Reifenscheid',
     'version' => '11.0.0',
