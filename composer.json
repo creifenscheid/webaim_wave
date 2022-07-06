@@ -3,14 +3,23 @@
 	"type" : "typo3-cms-extension",
 	"description" : "Accessibility testing of pages via WebAIM WAVE subscription API.",
 	"license" : "GPL-2.0-or-later",
+	"homepage" : "https://github.com/creifenscheid/webaim_wave",
 	"require" : {
 		"typo3/cms-core" : "^11.5"
 	},
+	"replace": {
+        "typo3-ter/ctype-manager": "self.version"
+    },
 	"autoload" : {
 		"psr-4" : {
 			"CReifenscheid\\WebaimWave\\" : "Classes/"
 		}
 	},
+	"extra": {
+        "typo3/cms": {
+            "extension-key": "ctype_manager"
+        }
+    },
 	"minimum-stability" : "alpha",
 	"authors" : [{
 			"name" : "C. Reifenscheid",
