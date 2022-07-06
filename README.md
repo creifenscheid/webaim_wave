@@ -16,5 +16,7 @@ If you want to contribute, feel free to do so.
 Thank you!
 
 ## Copyrights
+### WAVE logo
 The WAVE logo is owned by [WebAIM](https://webaim.org/).
-I’d like to thank [WebAIM](https://webaim.org/) for allowing me to use the logo in this project.
+
+I’d like to thank [WebAIM](https://webaim.org/) for allowing me to use the WAVE logo in this project.
