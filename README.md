@@ -2,7 +2,10 @@
 
 # TYPO3 Extension "WebAIM WAVE"
 ## Description
-This extension implements the WebAIM WAVE subscription API into TYPO3 CMS to provide an easy way to test the accessibility of pages in the backend.
+This extension implements the [WebAIM WAVE subscription API](https://wave.webaim.org/api/) into TYPO3 CMS to provide an easy way to test the accessibility of pages in the backend.
+
+To use this extension an API key is required.
+Therefor you need to [register](https://wave.webaim.org/api/register) for WebAIM WAVE API.
 
 ## Features
 - ...
