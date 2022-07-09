@@ -35,18 +35,25 @@ namespace CReifenscheid\WebaimWave\Api;
 abstract class AbstractApi implements \CReifenscheid\WebaimWave\Api\ApiInterface {
 
   /**
+   * API base url
+   *
+   * @var null|string 
+   */
+  protected ?string $baseUrl = null;
+
+  /**
    * API key
    *
    * @var null|string
    */
-  private ?string $apiKey = null;
+  protected ?string $apiKey = null;
 
   /**
    * Uid of page to test
    *
    * @var null|int
    */
-  private ?int $pageUid = null;
+  protected ?int $pageUid = null; 
   
   /**
    * Constructor
@@ -57,6 +64,7 @@ abstract class AbstractApi implements \CReifenscheid\WebaimWave\Api\ApiInterface
   {
      $this->pageUid = $pageUid;
      $this->apiKey = $this->getApiKey();
+     $this->baseUrl = $this->getBaseUrl();
   }
   
   /**
@@ -64,7 +72,7 @@ abstract class AbstractApi implements \CReifenscheid\WebaimWave\Api\ApiInterface
    *
    * @return string
    */
-  public function getApiKey() : string
+  protected function getApiKey() : string
   {
      // if no API key is set
      if($this->apiKey === null) {
@@ -82,8 +90,7 @@ abstract class AbstractApi implements \CReifenscheid\WebaimWave\Api\ApiInterface
         // if there is no root page API key configuration
         if($this->apiKey === null) {
            // get API key from extension configuration
-           $extConfApiKey = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)
-   ->get('webaim_wave', 'key');
+           $extConfApiKey = \CReifenscheid\WebaimWave\Utility\GeneralUtility::getExtensionConfiguration('key');
            
            if(!empty($extConfApiKey)) {
               $this->apiKey = $extConfApiKey;
@@ -93,10 +100,34 @@ abstract class AbstractApi implements \CReifenscheid\WebaimWave\Api\ApiInterface
      
      // check if an api key is set now
      if($this->apiKey === null) {
+        // @SeppTodo
         // throw exception
         // log error (loggerAwsreTrait)
      }
     
      return $this->apiKey; 
+  }
+  
+  /**
+   * Returns the configured API key
+   *
+   * @return string
+   */
+  protected function getBaseUrl() : string
+  {
+     // if no base url is set
+     if($this->baseUrl === null) {
+         $extConfBaseUrl = \CReifenscheid\WebaimWave\Utility\GeneralUtility::getExtensionConfiguration('baseUrl');
+           
+           if(!empty($extConfBaseUrl)) {
+              $this->baseUrl = $extConfBaseUrl;
+           } else {
+              // @SeppTodo
+              // throw exception
+              // log error (loggerAwsreTrait)
+           }
+     }
+     
+     return $this->baseUrl;
   }
 }

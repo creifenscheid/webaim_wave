@@ -4,6 +4,9 @@
       <header/>
       <body>
           <!-- EXTENSION CONFIGURATION -->
+          <trans-unit id="extconf.api.baseUrl" resname="extconf.api.baseUrl">
+              <source>API base URL: The APIs base url used to call the API.</source>
+          </trans-unit>
           <trans-unit id="extconf.api.key" resname="extconf.api.key">
               <source>API key: This key is used system-wide and can be overwritten in the page settings of a root page.</source>
           </trans-unit>
