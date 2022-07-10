@@ -130,4 +130,23 @@ abstract class AbstractApi implements \CReifenscheid\WebaimWave\Api\ApiInterface
      
      return $this->baseUrl;
   }
+  
+  /**
+   * Returns generated API url
+   *
+   * @param null|array $parameters 
+   *
+   * @return string
+   */
+  public function buildRequestUrl(?array $parameters = null) : string
+  {
+      $urlParams = '';
+  
+      if($parameters !== null) {
+          // @SeppTodo
+          // generate url parameter string
+      }
+      
+      return $this->baseUrl . $urlParams;
+  }
 }

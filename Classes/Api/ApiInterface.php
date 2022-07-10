@@ -37,10 +37,5 @@ interface ApiInterface {
   /**
    * Function to call API and return purified response
    */
-  public function get() : ?array;
-  
-  /**
-   * Function to build the URL required for the API call
-   */
-  protected function buildRequestUrl() : string; 
+  public function get() : ?array; 
 }
