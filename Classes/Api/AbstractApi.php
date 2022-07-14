@@ -78,14 +78,14 @@ abstract class AbstractApi implements \CReifenscheid\WebaimWave\Api\ApiInterface
      if($this->apiKey === null) {
         
         // get API key from root page of set page
-        $rootlineUtility = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(RootlineUtility::class, $this->pageUid);
+        $rootlineUtility = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Utility\RootlineUtility::class, $this->pageUid);
 
         $rootline = $rootlineUtility->get();
         $rootPage = end($rootline);
-        
-        var_dump($rootPage);die();
-        // get root page
-        // get api key of root page
+
+        if(!empty($rootPage['tx_webaimwave_apikey'])) {
+            $this->apiKey = $rootPage['tx_webaimwave_apikey'];
+         }  
         
         // if there is no root page API key configuration
         if($this->apiKey === null) {
