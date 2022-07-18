@@ -1,29 +1,33 @@
 {
-	"name" : "creifenscheid/webaim-wave",
-	"type" : "typo3-cms-extension",
-	"description" : "Accessibility testing of pages via WebAIM WAVE subscription API.",
-	"license" : "GPL-2.0-or-later",
-	"homepage" : "https://github.com/creifenscheid/webaim_wave",
-	"require" : {
-		"typo3/cms-core" : "^11.5"
-	},
-	"replace": {
+    "name": "creifenscheid/webaim-wave",
+    "type": "typo3-cms-extension",
+    "description": "Accessibility testing of pages via WebAIM WAVE subscription API.",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://github.com/creifenscheid/webaim_wave",
+    "require": {
+        "typo3/cms-core": "^11.5"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    },
+    "replace": {
         "typo3-ter/webaim-wave": "self.version"
     },
-	"autoload" : {
-		"psr-4" : {
-			"CReifenscheid\\WebaimWave\\" : "Classes/"
-		}
-	},
-	"extra": {
+    "autoload": {
+        "psr-4": {
+            "CReifenscheid\\WebaimWave\\": "Classes/"
+        }
+    },
+    "extra": {
         "typo3/cms": {
             "extension-key": "webaim_wave"
         }
     },
-	"minimum-stability" : "alpha",
-	"authors" : [{
-			"name" : "C. Reifenscheid",
-			"email" : "dev@christian-reifenscheid.de"
-		}
-	]
+    "minimum-stability": "alpha",
+    "authors": [
+        {
+            "name": "C. Reifenscheid",
+            "email": "dev@christian-reifenscheid.de"
+        }
+    ]
 }

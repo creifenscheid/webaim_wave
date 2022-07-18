@@ -32,15 +32,15 @@ namespace CReifenscheid\WebaimWave\Api;
  *
  * @package \CReifenscheid\WebaimWave\Api
  */
-class SubscriptionApi extends \CReifenscheid\WebaimWave\Api\AbstractApi {
-
-  /**
-   * Function to call API and return purified response
-   *
-   * @return null|array
-   */
-  public function get() : ?array
-  {
-      return null;
-  }
+class SubscriptionApi extends AbstractApi
+{
+    /**
+     * Function to call API and return purified response
+     *
+     * @return null|array
+     */
+    public function get() : ?array
+    {
+        return null;
+    }
 }

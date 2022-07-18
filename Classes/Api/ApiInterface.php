@@ -32,10 +32,10 @@ namespace CReifenscheid\WebaimWave\Api;
  *
  * @package \CReifenscheid\WebaimWave\Api
  */
-interface ApiInterface {
-
-  /**
-   * Function to call API and return purified response
-   */
-  public function get() : ?array; 
+interface ApiInterface
+{
+    /**
+     * Function to call API and return purified response
+     */
+    public function get() : ?array;
 }

@@ -13,6 +13,5 @@ defined('TYPO3_MODE') or die();
         $rootlinefields .= ' , ';
     }
     $rootlinefields .= 'tx_webaimwave_apikey';
-
     
 })('webaim_wave');

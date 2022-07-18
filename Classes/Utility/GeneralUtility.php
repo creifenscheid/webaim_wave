@@ -2,6 +2,8 @@
 
 namespace CReifenscheid\WebaimWave\Utility;
 
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -40,14 +42,16 @@ class GeneralUtility
      * @param string $key
      *
      * @return null|string
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
      */
     public static function getExtensionConfiguration(string $key) : ?string
     {
-        if(!empty($key)) {
-            return \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Configuration\ExtensionConfiguration::class)
-   ->get('webaim_wave', $key);
+        if (!empty($key)) {
+            return \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(ExtensionConfiguration::class)
+                ->get('webaim_wave', $key);
         }
-        
+
         // @SeppTodo
         // throw exception
         // log error (loggerAwsreTrait)
