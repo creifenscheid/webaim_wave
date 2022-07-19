@@ -148,6 +148,7 @@ abstract class AbstractApi implements ApiInterface
         if ($parameters !== null) {
             // @SeppTodo
             // generate url parameter string
+            // implodeArrayForUrl($name, array $
         }
 
         return $this->baseUrl . $urlParams;

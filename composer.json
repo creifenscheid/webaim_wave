@@ -1,7 +1,7 @@
 {
     "name": "creifenscheid/webaim-wave",
     "type": "typo3-cms-extension",
-    "description": "Accessibility testing of pages via WebAIM WAVE subscription API.",
+    "description": "This extension implements the WebAIM WAVE subscription API to provide accessibility testing of pages in the backend.",
     "license": "GPL-2.0-or-later",
     "homepage": "https://github.com/creifenscheid/webaim_wave",
     "require": {

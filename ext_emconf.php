@@ -27,7 +27,7 @@
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'WebAIM WAVE',
-    'description' => 'Accessibility testing of pages via WebAIM WAVE subscription API',
+    'description' => 'This extension implements the WebAIM WAVE subscription API to provide accessibility testing of pages in the backend.',
     'category' => 'be',
     'author' => 'C. Reifenscheid',
     'version' => '11.0.0',
