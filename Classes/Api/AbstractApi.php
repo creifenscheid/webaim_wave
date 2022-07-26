@@ -2,6 +2,7 @@
 
 namespace CReifenscheid\WebaimWave\Api;
 
+use CReifenscheid\WebaimWave\Exception\ConfigurationException;
 use CReifenscheid\WebaimWave\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
 
@@ -62,6 +63,10 @@ abstract class AbstractApi implements ApiInterface
      * Constructor
      *
      * @param int $pageUid
+     *
+     * @throws \CReifenscheid\WebaimWave\Exception\ConfigurationException
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
      */
     public function __construct(int $pageUid)
     {
@@ -74,6 +79,9 @@ abstract class AbstractApi implements ApiInterface
      * Returns the configured API key
      *
      * @return string
+     * @throws \CReifenscheid\WebaimWave\Exception\ConfigurationException
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
      */
     protected function getApiKey() : string
     {
@@ -103,8 +111,10 @@ abstract class AbstractApi implements ApiInterface
 
         // check if an api key is set now
         if ($this->apiKey === null) {
+            $message = 'An API key is required, but not configured.';
+            throw new ConfigurationException($message, 23012301);
+
             // @SeppTodo
-            // throw exception
             // log error (loggerAwsreTrait)
         }
 
@@ -115,6 +125,9 @@ abstract class AbstractApi implements ApiInterface
      * Returns the configured API key
      *
      * @return string
+     * @throws \CReifenscheid\WebaimWave\Exception\ConfigurationException
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
      */
     protected function getBaseUrl() : string
     {
@@ -125,8 +138,10 @@ abstract class AbstractApi implements ApiInterface
             if (!empty($extConfBaseUrl)) {
                 $this->baseUrl = $extConfBaseUrl;
             } else {
+                $message = 'An API base url is required, but not configured.';
+                throw new ConfigurationException($message, 23012302);
+
                 // @SeppTodo
-                // throw exception
                 // log error (loggerAwsreTrait)
             }
         }

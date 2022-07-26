@@ -1,8 +1,6 @@
 <?php
 
-namespace CReifenscheid\WebaimWave\Utility;
-
-use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
+namespace CReifenscheid\WebaimWave\Exception;
 
 /***************************************************************
  *
@@ -30,28 +28,10 @@ use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
  ***************************************************************/
 
 /**
- * Class GeneralUtility
+ * Class ConfigurationException
  *
- * @package \CReifenscheid\WebaimWave\Utility
+ * @package \CReifenscheid\WebaimWave\Exception
  */
-class GeneralUtility
+class ConfigurationException extends \TYPO3\CMS\Core\Exception
 {
-    /**
-     * Returns the extension configuration value of the given key
-     *
-     * @param string $key
-     *
-     * @return null|string
-     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
-     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
-     */
-    public static function getExtensionConfiguration(string $key) : ?string
-    {
-        if (!empty($key)) {
-            return \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(ExtensionConfiguration::class)
-                ->get('webaim_wave', $key);
-        }
-
-        return null;
-    }
 }
