@@ -54,4 +54,38 @@ class GeneralUtility
 
         return null;
     }
+
+    /**
+     * Returns an url prepared string based on the given array
+     *
+     * $array = [
+     *      'name' => 'value',
+     *      'name2' => 'value2'
+     * ]
+     *
+     * => ?name=value&name2=value2
+     *
+     * @param array $parameters
+     *
+     * @return string
+     */
+    public static function implodeArrayForUrl(array $parameters) : string
+    {
+        $urlParams = '';
+
+        foreach ($parameters as $key => $value) {
+            $parameterName = $key;
+            $parameterValue = rawurlencode($value);
+
+            if ($key === array_key_first($parameters)) {
+                $urlParams .= '?';
+            } else {
+                $urlParams .= '&';
+            }
+
+            $urlParams .= $parameterName . '=' . $parameterValue;
+        }
+
+        return $urlParams;
+    }
 }

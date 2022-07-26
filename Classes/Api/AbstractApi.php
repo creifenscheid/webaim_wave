@@ -71,6 +71,8 @@ abstract class AbstractApi implements ApiInterface
         $this->pageUid = $pageUid;
         $this->apiKey = $this->getApiKey();
         $this->baseUrl = $this->getBaseUrl();
+
+        $this->buildRequestUrl(['key' => '123', 'url' => 'https://www.christian-reifenscheid.de']);
     }
 
     /**
@@ -142,9 +144,7 @@ abstract class AbstractApi implements ApiInterface
         $urlParams = '';
 
         if ($parameters !== null) {
-            // @SeppTodo
-            // generate url parameter string
-            // implodeArrayForUrl($name, array $
+            $urlParams = GeneralUtility::implodeArrayForUrl($parameters);
         }
 
         return $this->baseUrl . $urlParams;
