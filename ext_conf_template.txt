@@ -1,5 +1,8 @@
-# cat=api; type=string; label=LLL:EXT:webaim_wave/Resources/Private/Language/locallang.xlf:extconf.api.baseUrl
+# cat=base; type=string; label=LLL:EXT:webaim_wave/Resources/Private/Language/locallang.xlf:extconf.api.baseUrl
 baseUrl = https://wave.webaim.org/api/request
 
-# cat=api; type=string; label=LLL:EXT:webaim_wave/Resources/Private/Language/locallang.xlf:extconf.api.key
+# cat=base; type=string; label=LLL:EXT:webaim_wave/Resources/Private/Language/locallang.xlf:extconf.api.key
 key =
+
+# cat=request configuration; type=options[Statistics (1 API credit)=1, Details (2 API credits)=2]; label=LLL:EXT:webaim_wave/Resources/Private/Language/locallang_subscription-api.xlf:reportType
+subscriptionApi.reportType = 1

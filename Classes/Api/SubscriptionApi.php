@@ -35,6 +35,19 @@ namespace CReifenscheid\WebaimWave\Api;
 class SubscriptionApi extends AbstractApi
 {
     /**
+     * Report type
+     *
+     * @var int
+     * @see https://wave.webaim.org/api/details
+     */
+    private int $reportType = 1;
+
+    /**
+     * Result format
+     */
+    private const FORMAT = 'json';
+
+    /**
      * Function to call API and return purified response
      *
      * @return null|array
