@@ -11,6 +11,21 @@ call_user_func(static function () {
                 'type' => 'input',
                 'eval' => 'trim,null'
             ]
+        ],
+
+        'tx_webaimwave_reporttype' => [
+            'label' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang.xlf:pages.tx_webaimwave_reporttype',
+            'description' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang.xlf:pages.tx_webaimwave_reporttype.description',
+            'displayCond' => 'FIELD:is_siteroot:REQ:true',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'default' => 1,
+                'items' => [
+                    ['LLL:EXT:webaim_wave/Resources/Private/Language/locallang.xlf:pages.tx_webaimwave_reporttype.1', 1],
+                    ['LLL:EXT:webaim_wave/Resources/Private/Language/locallang.xlf:pages.tx_webaimwave_reporttype.2', 2]
+                ]
+            ]
         ]
     ];
 
@@ -21,7 +36,7 @@ call_user_func(static function () {
 
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addToAllTCAtypes(
         'pages',
-        '--div--;LLL:EXT:webaim_wave/Resources/Private/Language/locallang.xlf:pages.tab.webaimwave, tx_webaimwave_apikey',
+        '--div--;LLL:EXT:webaim_wave/Resources/Private/Language/locallang.xlf:pages.tab.webaimwave, tx_webaimwave_apikey, tx_webaimwave_reporttype',
         '1'
     );
 

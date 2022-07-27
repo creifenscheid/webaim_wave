@@ -10,6 +10,9 @@
           <trans-unit id="extconf.api.key" resname="extconf.api.key">
               <source>API key: This key is used system-wide and can be overwritten in the page settings of a root page.</source>
           </trans-unit>
+          <trans-unit id="extconf.subscriptionApi.reportType" resname="extconf.subscriptionApi.reportType">
+              <source>Report type: Defines how detailed the report is. Report type "1" will return only the WAVE statistics for the page being analyzed. Report type "2" will return the statistics, as well as a listing of all WAVE items</source>
+          </trans-unit>
 
           <!-- PAGES -->
           <trans-unit id="pages.tab.webaimwave" resname="ages.tab.webaimwave">
@@ -20,6 +23,18 @@
           </trans-unit>
           <trans-unit id="pages.tx_webaimwave_apikey.description" resname="pages.tx_webaimwave_apikey.description">
               <source>You can specify your own API key for this root page, otherwise the system-wide key specified in the extension configuration is used.</source>
+          </trans-unit>
+          <trans-unit id="pages.tx_webaimwave_reporttype" resname="pages.tx_webaimwave_reporttype">
+              <source>Report type</source>
+          </trans-unit>
+          <trans-unit id="pages.tx_webaimwave_reporttype.description" resname="pages.tx_webaimwave_reporttype.description">
+              <source>Defines how detailed the report is. Report type "1" will return only the WAVE statistics for the page being analyzed. Report type "2" will return the statistics, as well as a listing of all WAVE items</source>
+          </trans-unit>
+          <trans-unit id="pages.tx_webaimwave_reporttype.1" resname="pages.tx_webaimwave_reporttype.1">
+              <source>Statistics (1 API credit)</source>
+          </trans-unit>
+          <trans-unit id="pages.tx_webaimwave_reporttype.2" resname="pages.tx_webaimwave_reporttype.2">
+              <source>Details (2 API credits)</source>
           </trans-unit>
           
       </body>
