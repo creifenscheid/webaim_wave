@@ -2,6 +2,8 @@
 
 namespace CReifenscheid\WebaimWave\Api;
 
+use CReifenscheid\WebaimWave\Utility\GeneralUtility;
+
 /***************************************************************
  *
  *  Copyright notice
@@ -48,6 +50,20 @@ class SubscriptionApi extends AbstractApi
     private const FORMAT = 'json';
 
     /**
+     * Constructor
+     *
+     * @param int $pageUid
+     *
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException
+     * @throws \TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException
+     */
+    public function __construct(int $pageUid)
+    {
+        parent::__construct($pageUid);
+        $this->reportType = $this->getReportType();
+    }
+
+    /**
      * Function to call API and return purified response
      *
      * @return null|array
@@ -55,5 +71,15 @@ class SubscriptionApi extends AbstractApi
     public function get() : ?array
     {
         return null;
+    }
+
+    /**
+     * Function to get the report type
+     *
+     * @return int
+     */
+    private function getReportType() : int
+    {
+        return $this->rootPage['tx_webaimwave_reporttype'];
     }
 }

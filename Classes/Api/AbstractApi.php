@@ -3,6 +3,7 @@
 namespace CReifenscheid\WebaimWave\Api;
 
 use CReifenscheid\WebaimWave\Utility\GeneralUtility;
+use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 use TYPO3\CMS\Core\Utility\RootlineUtility;
 
 /***************************************************************
@@ -59,6 +60,13 @@ abstract class AbstractApi implements ApiInterface
     protected ?int $pageUid = null;
 
     /**
+     * Rootpage of the given page uid
+     *
+     * @var array|null
+     */
+    protected ?array $rootPage = null;
+
+    /**
      * Constructor
      *
      * @param int $pageUid
@@ -69,10 +77,10 @@ abstract class AbstractApi implements ApiInterface
     public function __construct(int $pageUid)
     {
         $this->pageUid = $pageUid;
+        $this->rootPage = $this->getRootpage();
+        
         $this->apiKey = $this->getApiKey();
         $this->baseUrl = $this->getBaseUrl();
-
-        $this->buildRequestUrl(['key' => '123', 'url' => 'https://www.christian-reifenscheid.de']);
     }
 
     /**
@@ -87,14 +95,8 @@ abstract class AbstractApi implements ApiInterface
         // if no API key is set
         if ($this->apiKey === null) {
 
-            // get API key from root page of set page
-            $rootlineUtility = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(RootlineUtility::class, $this->pageUid);
-
-            $rootline = $rootlineUtility->get();
-            $rootPage = end($rootline);
-
-            if (!empty($rootPage['tx_webaimwave_apikey'])) {
-                $this->apiKey = $rootPage['tx_webaimwave_apikey'];
+            if (!empty($this->rootPage['tx_webaimwave_apikey'])) {
+                $this->apiKey = $this->rootPage['tx_webaimwave_apikey'];
             }
 
             // if there is no root page API key configuration
@@ -148,5 +150,23 @@ abstract class AbstractApi implements ApiInterface
         }
 
         return $this->baseUrl . $urlParams;
+    }
+
+    /**
+     * Function to get the rootpage of the given page uid
+     *
+     * @return array
+     */
+    private function getRootpage() : array
+    {
+        /** @var \TYPO3\CMS\Core\Domain\Repository\PageRepository $pageRepository */
+        $pageRepository = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(PageRepository::class);
+
+        // get API key from root page of set page
+        $rootlineUtility = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(RootlineUtility::class, $this->pageUid);
+        $rootline = $rootlineUtility->get();
+        $rootPage = end($rootline);
+
+        return $pageRepository->getPage($rootPage['uid']);
     }
 }

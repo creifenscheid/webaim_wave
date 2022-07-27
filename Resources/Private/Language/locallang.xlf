@@ -10,9 +10,6 @@
           <trans-unit id="extconf.api.key" resname="extconf.api.key">
               <source>API key: This key is used system-wide and can be overwritten in the page settings of a root page.</source>
           </trans-unit>
-          <trans-unit id="extconf.subscriptionApi.reportType" resname="extconf.subscriptionApi.reportType">
-              <source>Report type: Defines how detailed the report is. Report type "1" will return only the WAVE statistics for the page being analyzed. Report type "2" will return the statistics, as well as a listing of all WAVE items</source>
-          </trans-unit>
 
           <!-- PAGES -->
           <trans-unit id="pages.tab.webaimwave" resname="ages.tab.webaimwave">
