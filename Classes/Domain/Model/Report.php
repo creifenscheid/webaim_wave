@@ -37,6 +37,13 @@ use TYPO3\CMS\Extbase\DomainObject\AbstractEntity;
 class Report extends AbstractEntity
 {
     /**
+     * Creation date of the entry
+     *
+     * @var int
+     */
+    protected int $crdate = 0;
+
+    /**
      * Uid of reported page
      *
      * @var int
@@ -92,6 +99,28 @@ class Report extends AbstractEntity
      * @var string|null
      */
     protected ?string $result = null;
+
+    /**
+     * Returns the creation date
+     *
+     * @return int
+     */
+    public function getCrdate() : int
+    {
+        return $this->crdate;
+    }
+
+    /**
+     * Sets the creation date
+     *
+     * @param int $crdate
+     *
+     * @return void
+     */
+    public function setCrdate(int $crdate) : void
+    {
+        $this->crdate = $crdate;
+    }
 
     /**
      * Returns
