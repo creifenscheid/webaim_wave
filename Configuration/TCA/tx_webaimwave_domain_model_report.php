@@ -41,7 +41,7 @@ return [
                 ]
             ]
         ],
-        sys_language_uid' => [
+        'sys_language_uid' => [
             'exclude' => true,
             'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.language',
             'config' => [
