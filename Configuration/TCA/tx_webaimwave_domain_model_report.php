@@ -3,6 +3,8 @@
 return [
     'ctrl' => [
         #'hideTable' => true,
+        'title' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.label',
+        'label' => 'crdate',
         'adminOnly' => true,
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
