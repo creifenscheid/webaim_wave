@@ -7,7 +7,21 @@
           <trans-unit id="tx_webaimwave_domain_model_report.label" resname="tx_webaimwave_domain_model_report.label">
               <source>WebAIM WAVE Report</source>
           </trans-unit>
-          
+          <trans-unit id="tx_webaimwave_domain_model_report.page" resname="tx_webaimwave_domain_model_report.page">
+              <source>Tested page</source>
+          </trans-unit>
+          <trans-unit id="tx_webaimwave_domain_model_report.report_type" resname="tx_webaimwave_domain_model_report.report_type">
+              <source>Report type</source>
+          </trans-unit> 
+          <trans-unit id="tx_webaimwave_domain_model_report.report_type.1" resname="tx_webaimwave_domain_model_report.report_type.1">
+              <source>Statistics (1 credit)</source>
+          </trans-unit>
+          <trans-unit id="tx_webaimwave_domain_model_report.report_type.2" resname="tx_webaimwave_domain_model_report.report_type.2">
+              <source>Details (2 credits)</source>
+          </trans-unit>
+          <trans-unit id="tx_webaimwave_domain_model_report.result" resname="tx_webaimwave_domain_model_report.result">
+              <source>Result</source>
+          </trans-unit>
       </body>
    </file>
 </xliff>

@@ -21,6 +21,8 @@ return [
         'enablecolumns' => [
             'disabled' => 'hidden',
         ],
+        
+        'iconfile' => 'EXT:webaim_wave/Resources/Public/Icons/tx_webaimwave_domain_model_report.svg'
     ],
     'types' => [
         [
@@ -80,5 +82,27 @@ return [
                 'default' => '',
             ],
         ],
+        'page' => [
+            'label' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.page',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle'
+            ],
+        ],
+        'report_type' => [
+            'label' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.report_type',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle'
+                'default' => '1',
+            ],
+        ],
+        'result' => [
+            'label' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.result',
+            'config' => [
+                'type' => 'text',
+                'default' => '',
+            ],
+        ]
     ]
 ];
