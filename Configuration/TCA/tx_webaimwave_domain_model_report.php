@@ -33,7 +33,7 @@ return [
     ],
     'palettes' => [
         'testSettings' => [
-            'label' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.palettes.testSertings',
+            'label' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.palettes.testSettings',
             'showitem' => 'page, report_type',
         ],
     ],
