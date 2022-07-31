@@ -7,6 +7,12 @@
           <trans-unit id="tx_webaimwave_domain_model_report.label" resname="tx_webaimwave_domain_model_report.label">
               <source>WebAIM WAVE Report</source>
           </trans-unit>
+          <trans-unit id="tx_webaimwave_domain_model_report.palettes.testSertings" resname="tx_webaimwave_domain_model_report.palettes.testSertings">
+              <source>Test settings</source>
+          </trans-unit>
+          <trans-unit id="tx_webaimwave_domain_model_report.crdate" resname="tx_webaimwave_domain_model_report.crdate">
+              <source>Test date</source>
+          </trans-unit>
           <trans-unit id="tx_webaimwave_domain_model_report.page" resname="tx_webaimwave_domain_model_report.page">
               <source>Tested page</source>
           </trans-unit>

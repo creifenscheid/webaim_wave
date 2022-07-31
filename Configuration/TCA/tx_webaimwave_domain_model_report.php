@@ -19,15 +19,23 @@ return [
         
         'delete' => 'delete',
         'enablecolumns' => [
-            'disabled' => 'hidden',
+            'disabled' => 'hidden'
         ],
         
         'iconfile' => 'EXT:webaim_wave/Resources/Public/Icons/tx_webaimwave_domain_model_report.svg'
     ],
     'types' => [
         [
-            'showitem' => 'xxx',
+            'showitem' => 'crdate,
+            --palette--;;testSettings,
+            , result',
         ]
+    ],
+    'palettes' => [
+        'testSettings' => [
+            'label' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.palettes.testSertings',
+            'showitem' => 'page, report_type',
+        ],
     ],
     'columns' => [
         'hidden' => [
@@ -82,11 +90,22 @@ return [
                 'default' => '',
             ],
         ],
+        'crdate' => [
+            'label' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.crdate',
+            'config' => [
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'eval' => 'date,int',
+                'default' => 0
+            ]
+        ],
         'page' => [
             'label' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.page',
             'config' => [
                 'type' => 'select',
-                'renderType' => 'selectSingle'
+                'renderType' => 'selectSingle',
+                'foreign_table' => 'pages',
+                'readOnly' => true
             ],
         ],
         'report_type' => [
@@ -94,15 +113,27 @@ return [
             'config' => [
                 'type' => 'select',
                 'renderType' => 'selectSingle'
-                'default' => '1',
-            ],
+                'default' => 1,
+                'items' => [
+                    [
+                        'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.report_type.1',
+                        1
+                    ],
+                    [
+                        'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.report_type.2',
+                        2
+                    ]
+                ],
+                'readOnly' => true
+            ]
         ],
         'result' => [
             'label' => 'LLL:EXT:webaim_wave/Resources/Private/Language/locallang_tca.xlf:tx_webaimwave_domain_model_report.result',
             'config' => [
                 'type' => 'text',
                 'default' => '',
-            ],
+                'readOnly' => true
+            ]
         ]
     ]
 ];
